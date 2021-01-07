@@ -1,1 +1,1 @@
-# js-objects-basic
+# js-objects-basics
