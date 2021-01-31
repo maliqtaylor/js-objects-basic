@@ -1,3 +1,9 @@
+/* objects:
+
+objects are dynamic and easily ediable
+
+*/
+
 //object literals
 const circle = {
   area: 25,
@@ -7,10 +13,24 @@ const circle = {
     y: 5
   },
   isVisable: true,
+  color: 'blue',
   getLocation: function () {
     console.log(`(${this.location.x}, ${this.location.y})`)
   }
 }
+
+//deleting color property of circle
+delete circle.color
+
+//cloning objects
+const another = Object.assign({}, circle) //can assign multiple objs at once
+//or
+const otra = { ...circle }
+
+console.log(otra);
+
+//in operator : method to check if a given key is in an object
+'color' in circle ? console.log('yes') : console.log('no')
 
 // console.log(circle)
 
@@ -51,4 +71,3 @@ function ConstructorCircle(area, radius, location) {
 
 const constructed_circle = new ConstructorCircle(9, 3, { x: 3, y: 3 })
 // console.log(constructed_circle);
-console.log(constructed_circle.constructor);
